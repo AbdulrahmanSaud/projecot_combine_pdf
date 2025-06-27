@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Combine PDFs</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: #fff;
+            padding: 2.5rem 2rem 2rem 2rem;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            font-weight: 700;
+            color: #f76b1c;
+            margin-bottom: 1.5rem;
+        }
+        input[type="file"] {
+            margin: 1rem 0;
+            padding: 0.5rem;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            width: 100%;
+        }
+        button {
+            background: linear-gradient(90deg, #f76b1c 0%, #fad961 100%);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 0.75rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            margin-top: 1rem;
+        }
+        button:hover {
+            background: linear-gradient(90deg, #fad961 0%, #f76b1c 100%);
+            transform: translateY(-2px) scale(1.03);
+        }
+        @media (max-width: 500px) {
+            .container {
+                padding: 1.5rem 0.5rem 1rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Combine PDF Files</h1>
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="pdfs" accept="application/pdf" multiple required>
+            <br>
+            <button type="submit">Combine PDFs</button>
+        </form>
+    </div>
+</body>
+</html> 
